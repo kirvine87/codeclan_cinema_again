@@ -51,5 +51,8 @@ require_relative("./customer.rb")
      return customers.map{|customer| Customer.new(customer)}
    end
 
+   def popularity()
+     popularity = customers().count()
+   end
 
  end

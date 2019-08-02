@@ -59,4 +59,9 @@ require_relative("./film.rb")
     return @funds - fee
    end
 
+   def tickets()
+     films = films().count()
+     return films
+   end
+
  end

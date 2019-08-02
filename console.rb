@@ -73,6 +73,10 @@ ticket3 = Ticket.new({
   ticket1.customer_id = customer2.id
   ticket1.update()
 
+  # ticket1.delete()
+  # customer1.delete()
+  # film1.delete()
+
 binding.pry
 
 nil

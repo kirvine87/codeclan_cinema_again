@@ -12,5 +12,21 @@
      @price = options['price']
    end
 
+   def save()
+     sql = "INSERT INTO films (title, price) VALUES ($1, $2)
+     RETURNING id"
+     values = [@title, @price]
+     movie = SqlRunner.run(sql, values)[0]
+     @id = movie['id'].to_i()
+   end
+
+   def update()
+     sql = "UPDATE films SET (title, price) = ($1, $2) WHERE id = $3"
+     values = [@title, @price, @id]
+     SqlRunner.run(sql, values)
+   end
+
+   
+
 
  end
